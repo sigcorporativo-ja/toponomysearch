@@ -1,0 +1,47 @@
+<div class="m-control m-toponomysearch-container">
+    <!-- TITLE -->
+    <div class="title">Búsqueda de toponimos</div>
+    <!-- search panel -->
+    <!-- FORM -->
+    <div class="form">
+        <!-- Nombre -->
+        <div class="name">
+            <label>Nombre</label>
+            <input type="text" name='name'>
+        </div>
+        <!-- center on layer -->
+        <div class="options">
+            <input id="option-starts" type="radio" checked value="starts" name="options">
+            <label for="option-starts">Empieza por...</label>
+
+            <input id="option-contains" type="radio" value="contains" name="options">
+            <label for="option-contains">Contiene la palabra...</label>
+        </div>
+        <!-- Provincia -->
+        <div class="province">
+            <label>Provincia</label>
+            <select name="provincelist">
+                <option value="">Provincia...</option>
+                {{#each provincias}}
+                <option value="{{this}}">{{this}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <!-- Municipio -->
+        <div class="municipality">
+            <label>Municipio</label>
+            <input type="text" name='municipality'>
+        </div>
+    </div>
+    <!-- buttons -->
+    <div class="buttons">
+        <button class="load" title="Buscar coordenada" disabled>
+            <i class="g-cartografia-posicion3"></i> Buscar</button>
+        <button class="clear" title="Limpiar coordenadas" disabled>
+            <i class="g-cartografia-check4"></i> Limpiar</button>
+    </div>
+    <!-- results panel -->
+    <div class="results-panel" id="m-toponomysearch-results">
+        <div id="m-searching-result" class="m-searching-result g-cartografia-spinner"></div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+{
+  "url": {
+    "name": "Toponomysearch",
+    "separator": "*"
+  },
+  "constructor": "M.plugin.Toponomysearch",
+  "parameters": [],
+  "files": {
+    "ol": {
+      "scripts": ["toponomysearch.ol.min.js"],
+      "styles": ["toponomysearch.ol.min.css"]
+    }
+  },
+  "metadata": {
+    "name": "Toponomysearch",
+    "description": "Buscador de Topónimos",
+    "text": "Buscador de topónimos en el servicio wfs-nga del IECA",
+    "version": "1.0.1",
+    "date": "18/05/21",
+    "author": "IECA",
+    "org": "IECA",
+    "tags": "mapea,plugin",
+    "icon": "./facade/assets/icons/icons.svg",
+    "centralized": true,
+    "compatibility": ["4.3","5","6"]
+  }
+}
