@@ -1,0 +1,355 @@
+/*********************
+       GENERAL
+*********************/
+
+.m-toponomysearch-container {
+    /*min-width: 200px;*/
+    color: #404040;
+    width: 100%;
+}
+
+/****************************
+      toponomysearch TITLE
+ ****************************/
+
+.m-toponomysearch-container>div.title {
+    line-height: 40px;
+    text-align: center;
+    height: 39px;
+    border-bottom: 1px solid rgba(0, 0, 0, .13);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #00897B;
+    color: white;
+}
+
+/***************************
+      toponomysearch FORMS
+ ****************************/
+
+.m-toponomysearch-container>div.form {
+    width: 90%;
+    margin: 10px auto;
+}
+
+.m-toponomysearch-container>div.form>div {
+    margin: 10px auto;
+}
+
+.m-toponomysearch-container>div.form input[type="text"] {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 0px;
+    height: 25px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 6px 7px;
+}
+
+.m-toponomysearch-container>div.form>div.province>select {
+    height: 25px;
+    width: 100%;
+    cursor: pointer;
+    padding: 0px 7px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #6c6c6c;
+    font-family: 'Muli', 'sans-serif';
+}
+
+.m-toponomysearch-container>div.form>div.options {
+    display: flex;
+    margin: 10px;
+}
+
+.m-toponomysearch-container>div.form>div>label {
+    font-weight: bold;
+}
+
+/*********************
+      BUTTONS
+ *********************/
+
+.m-toponomysearch-container>div.buttons {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: table;
+    background-color: #FFB74D;
+}
+
+.m-toponomysearch-container>div.buttons>button {
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    font-size: 15px;
+    line-height: 25px;
+    cursor: pointer;
+    opacity: 0.75;
+    -webkit-transition: opacity 0.25s ease 0s;
+    transition: opacity 0.25s ease 0s;
+    color: #404040;
+}
+
+.m-toponomysearch-container>div.buttons>button:hover:enabled {
+    opacity: 1;
+}
+
+.m-toponomysearch-container>div.buttons>button:focus:enabled {
+    outline: none;
+}
+
+.m-toponomysearch-container>div.buttons>button:before {
+    font-size: 21px;
+    margin-right: 10px;
+}
+
+.m-toponomysearch-container>div.buttons>button {
+    width: 39%;
+    margin: 10px 5% 10px 5%;
+    padding: 5px;
+    background-color: #fff;
+    font-family: 'Muli', 'sans-serif' !important;
+    cursor: pointer;
+}
+
+.m-toponomysearch-container>div.buttons>button:disabled {
+    cursor: not-allowed
+}
+
+@-moz-document url-prefix() {
+    .m-toponomysearch-container>div.button>button.print {
+        margin: 10px 4% 10px 5%;
+    }
+}
+
+.m-toponomysearch-container>div.buttons>button i {
+    font-size: 20px;
+    vertical-align: text-bottom;
+}
+
+.m-control>button {
+    color: #404040;
+}
+
+/*********************
+      RESULTS PANEL
+ *********************/
+
+.m-toponomysearch-container.m-searching div.results-panel>div.results {}
+
+.m-toponomysearch-container>.results-panel {
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    max-height: 20vh;
+}
+
+.m-toponomysearch-container>.results-panel>div.results {
+    padding: 5px;
+}
+
+.m-toponomysearch-container>.results-panel>div.results>span {
+    display: block;
+    padding: 10px;
+}
+
+.m-toponomysearch-container .results-panel.hidden>div.results {
+    margin: 0px;
+    max-height: 0 !important;
+}
+
+.m-searching-result {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    top: 0;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.m-toponomysearch-container .results-panel>div.page {
+    font-size: 50px;
+}
+
+.m-searching-result:before {
+    margin: 0 auto;
+    -webkit-animation: mloading 1s linear infinite;
+    -moz-animation: mloading 1s linear infinite;
+    animation: mloading 1s linear infinite;
+}
+
+.m-toponomysearch-container.m-searching div.results-panel {
+    min-height: 50px;
+}
+
+.m-toponomysearch-container:not(.m-searching) div.m-searching-result {
+    display: none;
+}
+
+/*********************
+      RESULT
+ *********************/
+
+.m-toponomysearch-container>.results-panel>div.results>div:last-child {
+    border-bottom: none;
+}
+
+.results-panel>div.results>div.result {
+    padding: 10px;
+    cursor: pointer;
+    /*-webkit-transition: box-shadow 0.3s ease 0s, background 0.3s ease 0s, transform 0.05s ease 0s;
+    transition: box-shadow 0.3s ease 0s, background 0.3s ease 0s, transform 0.05s ease 0s;*/
+    margin: 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*************
+ POPUP
+******************/
+
+.m-popup>div.m-content>div.m-body>div.m-toponomysearch-content>div.result {
+    border-top: 1px solid rgba(0, 0, 0, 0.13);
+}
+
+.m-popup>div.m-content>div.m-body>div.m-toponomysearch-content>div.result:nth-child(1) {
+    border: 0px;
+}
+
+.m-popup>div.m-content>div.m-body>div.m-toponomysearch-content>div.result>table {
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.09);
+    border-top-style: dashed;
+}
+
+.m-popup>div.m-content>div.m-body>div.m-toponomysearch-content>div.result>table:nth-child(1) {
+    border: 0px
+}
+
+.m-popup>div.m-content>div.m-body>div.m-toponomysearch-content>div.result>table td.value {
+    text-align: right;
+}
+
+.m-popup>div.m-content>div.m-body>div.m-toponomysearch-content>div.result>table td.key {
+    font-weight: bold;
+}
+
+.m-popup>div.m-content>div.m-body>div.m-toponomysearch-content>div.result>table td.value,
+.m-popup>div.m-content>div.m-body>div.m-toponomysearch-content>div.result>table td.key {
+    white-space: normal;
+}
+
+.m-popup>div.m-content>div.m-body>div.m-toponomysearch-content>div.result>table td.key {
+    text-align: left;
+}
+
+.m-popup>div.m-content>div.m-body>div.m-toponomysearch-content>div.result>table td.value,
+.m-popup>div.m-content>div.m-body>div.m-toponomysearch-content>div.result>table td.key {
+    white-space: nowrap;
+}
+
+.m-popup>div.m-content>div.m-body>div.m-toponomysearch-content>div.result>table td.key {
+    text-align: left;
+    font-weight: bold;
+}
+
+.m-popup>div.m-content>div.m-body>div.m-toponomysearch-content>div.result>table td {
+    border-bottom: 1px solid rgba(0, 0, 0, .09);
+    border-bottom-style: dashed;
+}
+
+/***************
+        PANEL
+ ***************/
+
+.m-areas>div.m-area>div.m-panel.m-toponomysearch {
+    order: 1;
+    border-top-right-radius: 0px;
+}
+
+.m-areas>div.m-area>div.m-panel.m-toponomysearch.opened {
+    border-top-left-radius: 0px;
+}
+
+.m-areas>div.m-area>div.m-panel.m-toponomysearch.collapsed {
+    order: 1;
+    border-top-right-radius: 20px;
+}
+
+.m-areas>div.m-area>div.m-panel.m-toponomysearch>button.m-panel-btn {
+    background-color: #00897B;
+    position: absolute;
+    left: initial;
+    color: #fff;
+    z-index: 999999;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 -1px 0px rgba(0, 0, 0, 0.02);
+}
+
+.m-areas>div.m-area>div.m-panel.m-toponomysearch.opened>button.m-panel-btn {
+    right: -40px;
+}
+
+@media only screen and (max-width: 768px) {
+    .m-areas>div.m-area>div.m-panel.m-toponomysearch.opened>button.m-panel-btn {
+        background-color: transparent;
+        position: absolute;
+        right: 0;
+        left: initial;
+        color: #00897B;
+        z-index: 999999;
+        box-shadow: none;
+    }
+}
+
+.m-areas>div.m-area>div.m-panel.m-toponomysearch.collapsed>button.m-panel-btn {
+    color: #00897B;
+    position: inherit;
+    right: 0;
+    box-shadow: none;
+}
+
+/* ANIMATIONS */
+
+.m-areas>div.m-area>div.m-panel.m-toponomysearch {
+    -webkit-transition: max-height .33s ease-in-out 0s;
+    transition: max-height .33s ease-in-out 0s;
+    max-height: 100vh;
+}
+
+.m-areas>div.m-area>div.m-panel.m-toponomysearch.collapsed {
+    -webkit-transition: max-height .33s ease-in-out 0s;
+    transition: max-height .33s ease-in-out 0s;
+    max-height: 40px;
+}
+
+.m-areas>div.m-area>div.m-panel.m-toponomysearch>div.m-panel-controls {
+    -webkit-transition: max-width .5s ease 0s, opacity .44s ease 0s;
+    transition: max-width .5s ease 0s, opacity .44s ease 0s;
+    background: white;
+}
+
+.m-areas>div.m-area>div.m-panel.m-toponomysearch.opened {
+    width: 250px;
+}
+
+@media only screen and (max-width: 768px) {
+    .m-areas>div.m-area>div.m-panel.m-toponomysearch.opened {
+        margin-left: 0;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 0;
+        z-index: 10000;
+        overflow: auto;
+    }
+}

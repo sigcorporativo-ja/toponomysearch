@@ -1,0 +1,11 @@
+<div class="results-panels">
+
+    <div class="results">
+        {{#each results}}
+        <div data-id="{{entidad.identidad}}" class="result">
+            {{entidad.nombre}} ({{entidad.tipo}}, {{entidad.municipio}}, {{entidad.provincia}})
+        </div>{{else}}
+        <span>No se han encontrado resultados para la búsqueda "{{query}}".</span>
+        {{/each}}
+    </div>
+</div>
