@@ -15,7 +15,7 @@
     "name": "Toponomysearch",
     "description": "Buscador de Topónimos",
     "text": "Buscador de topónimos en el servicio wfs-nga del IECA",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "date": "18/05/21",
     "author": "IECA",
     "org": "IECA",
