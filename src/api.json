@@ -4,7 +4,7 @@
     "separator": "*"
   },
   "constructor": "M.plugin.Toponomysearch",
-  "parameters": [],
+  "parameters": [{}],
   "files": {
     "ol": {
       "scripts": ["toponomysearch.ol.min.js"],
@@ -16,7 +16,7 @@
     "description": "Buscador de Topónimos",
     "text": "Buscador de topónimos en el servicio wfs-nga del IECA",
     "version": "1.0.2",
-    "date": "18/05/21",
+    "date": "08/03/22",
     "author": "IECA",
     "org": "IECA",
     "tags": "mapea,plugin",
