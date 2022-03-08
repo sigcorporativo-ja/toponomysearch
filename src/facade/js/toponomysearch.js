@@ -6,7 +6,7 @@ import ToponomySearchControl from './toponomysearchcontrol';
 import api from '../../api.json';
 
 export default class ToponomySearch extends M.Plugin {
-  
+
   /**
    * @classdesc
    * Main facade plugin object. This class creates a plugin
@@ -36,13 +36,9 @@ export default class ToponomySearch extends M.Plugin {
      */
     this.controls_ = [];
 
-    /**
-     * Name of this control
-     * @public
-     * @type {string}
-     * @api stable
-     */
-    this.name = ToponomySearch.NAME;
+    this.control_ = null;
+
+    this.name_='toponomysearch'
 
     /**
      * TODO
@@ -94,7 +90,7 @@ export default class ToponomySearch extends M.Plugin {
      * @type {Object}
      */
     this.metadata_ = api.metadata;
-    
+
   }
 
   /**
@@ -111,6 +107,7 @@ export default class ToponomySearch extends M.Plugin {
     map._areasContainer.getElementsByClassName("m-top m-right")[0].classList.add("top-extra");
 
     this.control_ = new ToponomySearchControl(this.url_, this.core_, this.handler_, this.searchParameters_);
+    this.controls_.push(this.control_)
     this.panel_ = new M.ui.Panel('toponomysearch', {
       'collapsible': true,
       'className': 'm-toponomysearch',
@@ -118,11 +115,11 @@ export default class ToponomySearch extends M.Plugin {
       'position': M.ui.position.TL,
       'tooltip': 'Búsqueda de topónimos'
     });
-    this.panel_.addControls(this.control_);
-    this.map_.addPanels(this.panel_);
-    this.control_.on(M.evt.ADDED_TO_MAP, () => {
+    this.panel_.on(M.evt.ADDED_TO_MAP, () => {
       this.fire(M.evt.ADDED_TO_MAP);
     });
+    this.panel_.addControls(this.control_);
+    this.map_.addPanels(this.panel_);
   }
 
   /**
@@ -183,18 +180,11 @@ export default class ToponomySearch extends M.Plugin {
    * @function
    * @api stable
    */
-  getMetadata(){
+  getMetadata() {
     return this.metadata_;
   }
 
-  /**
-   * Name to identify this plugin
-   * @const
-   * @type {string}
-   * @public
-   * @api stable
-   */
-  static get NAME() {
+  get name() {
     return 'toponomysearch';
-}
+  }
 }
