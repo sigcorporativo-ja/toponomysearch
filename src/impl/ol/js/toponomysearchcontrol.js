@@ -69,11 +69,7 @@ export default class ToponomysearchControl extends M.impl.Control {
     this.facadeMap_ = map;
     this.element_ = element;
 
-    ol.control.Control.call(this, {
-      'element': element,
-      'target': null
-    });
-    map.getMapImpl().addControl(this);
+    super.addTo(map, element);
   }
 
   /**
